@@ -63,10 +63,9 @@ public enum DatabaseProduct {
                                 "PostgreSQL XADataSource doesn't support connection URLs"
                         );
                     }
-                    ds.getDriverProperties().put("serverName", "10.0.0.2");
-                    ds.getDriverProperties().put("databaseName", "test");
-                    ds.getDriverProperties().put("user", "test");
-                    ds.getDriverProperties().put("password", "test");
+                    ds.getDriverProperties().put("user", "postgres");
+                    ds.getDriverProperties().put("password", "postgres");
+                    ds.getDriverProperties().put("url", "jdbc:postgresql://localhost:5432/topjava");
                 }
             },
             org.hibernate.dialect.PostgreSQL82Dialect.class.getName()
