@@ -89,6 +89,6 @@ public class JPASetup {
             "javax.persistence.schema-generation.database.action",
             action
         );
-        Persistence.generateSchema(getPersistenceUnitName(), createSchemaProperties);
+    //    Persistence.generateSchema(getPersistenceUnitName(), createSchemaProperties);
     }
 }
