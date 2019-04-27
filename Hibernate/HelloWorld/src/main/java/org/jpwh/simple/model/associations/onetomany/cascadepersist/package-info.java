@@ -11,4 +11,4 @@
         value = "1000"
      )
 })
-package org.jpwh.simple.model;
+package oorg.jpwh.simple.model.associations.onetomany.cascadepersist;

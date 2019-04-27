@@ -24,9 +24,10 @@
         </properties>
     </persistence-unit>
 
-    <persistence-unit name="SimplePU">
+    <persistence-unit name="OneToManyCascadePersistPU">
         <jta-data-source>myDS</jta-data-source>
-        <class>org.jpwh.simple.model.Item</class>
+        <class>org.jpwh.simple.model.associations.onetomany.cascadepersist.Item</class>
+        <class>org.jpwh.simple.model.associations.onetomany.cascadepersist.Bid</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
 
         <properties>
