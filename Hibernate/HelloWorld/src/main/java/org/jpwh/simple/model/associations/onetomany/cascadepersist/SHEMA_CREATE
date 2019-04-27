@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS Bid;
+DROP TABLE IF EXISTS Item;
+
+
+create table Item (
+  id bigint not null,
+  name varchar(255),
+  primary key (id)
+);
+
+create table Bid (
+  id bigint not null,
+  amount decimal(19,2) not null,
+  item_id bigint not null,
+  primary key (id),
+  foreign key (item_id) references Item (id) on delete cascade
+);
+
+commit ;
