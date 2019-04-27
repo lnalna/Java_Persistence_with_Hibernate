@@ -44,6 +44,26 @@
         </properties>
     </persistence-unit>
 
+    <persistence-unit name="OneToManyBidirectionalPU">
+        <jta-data-source>myDS</jta-data-source>
+        <class>org.jpwh.simple.model.associations.onetomany.bidirectional.Item</class>
+        <class>org.jpwh.simple.model.associations.onetomany.bidirectional.Bid</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/topjava" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="postgres" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+
     <!--
 
     https://gist.github.com/SergioDiniz/886723272d9fd95dd17ecb79b35b66e1
