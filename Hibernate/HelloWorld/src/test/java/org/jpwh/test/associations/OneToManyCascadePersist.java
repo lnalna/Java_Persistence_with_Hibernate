@@ -49,9 +49,13 @@ public class OneToManyCascadePersist extends JPATest {
             Item item = em.find(Item.class, ITEM_ID);
             assertEquals(item.getBids().size(), 2);
 
-            for (Bid bid : item.getBids()) {
+           /*
+           Можно убрать, если есть
+           foreign key (item_id) references Item (id) on delete cascade
+
+           for (Bid bid : item.getBids()) {
                 em.remove(bid);
-            }
+            }*/
 
             em.remove(item);
 
